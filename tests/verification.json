@@ -1,0 +1,33 @@
+{
+  "testEnvironment": "Windows x64, Visual Studio 2022 MSVC 14.44, Windows SDK 10.0.26100",
+  "nativeProtocolFixture": {
+    "result": "passed",
+    "sampleDurationMs": 94,
+    "helperPrivateCommitBytes": 2641920,
+    "helperWorkingSetBytes": 13012992,
+    "helperPeakWorkingSetBytes": 13086720,
+    "scope": "Four loopback fixture targets including shared renderer, active profiler, and navigation failure. No Chrome browser was launched.",
+    "idleBehavior": "Native host exited after returning one framed response."
+  },
+  "background": {
+    "result": "passed",
+    "cases": [
+      "unique renderer totals",
+      "one shared-renderer warning",
+      "popup rate limit",
+      "worker restart cache",
+      "navigation invalidation",
+      "next-minute refresh",
+      "disconnected companion",
+      "optional permissions missing",
+      "legacy heap mode",
+      "paused alerts skip sampling"
+    ]
+  },
+  "limits": [
+    "Does not measure Chrome tracing overhead or real-browser sample latency.",
+    "Resource measurements are fixture observations, not guaranteed maxima.",
+    "Live Chrome popup/permissions/profile integration remains for user testing."
+  ],
+  "releaseExecutableBytes": 350208
+}

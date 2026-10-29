@@ -1,0 +1,74 @@
+[
+  {
+    "name": "ram-watch/background.js",
+    "sha256": "f6894dd2f32904a2ec24300d8b6e9ac9c374ccf624f6683ebdba4de9c295a47a"
+  },
+  {
+    "name": "ram-watch/icons/icon128.png",
+    "sha256": "2906e1f7584c9604e0a9fda6ae6811c675c28d3e499e81d39dcd78f0aa964579"
+  },
+  {
+    "name": "ram-watch/icons/icon16.png",
+    "sha256": "807cb55c1aff1c6f9785e6c87b11f908d40bdd598edbb63bcc0fb3b279c73080"
+  },
+  {
+    "name": "ram-watch/icons/icon48.png",
+    "sha256": "156b00c9316e62e50de542528fcab3ace635cbac6d3be06b3326c7eab2ff0af4"
+  },
+  {
+    "name": "ram-watch/manifest.json",
+    "sha256": "5de48a98a78944d94ebf1625b17c8ce9f2ef39950626a47f6c791889a111f665"
+  },
+  {
+    "name": "ram-watch/memory.js",
+    "sha256": "01b2d7fc6a98a0c4ea0120fb9b8916d9fd97c7e0adfa476874cff7a2b0442e4e"
+  },
+  {
+    "name": "ram-watch/popup.css",
+    "sha256": "ffd3e04434f0431d17d9bcaf6bd6e4f2c911f557ce7841388a50a784103c1ffb"
+  },
+  {
+    "name": "ram-watch/popup.html",
+    "sha256": "1c49bc213d425bfe17495ec300209f0c54c0180d094a50e84d7732e306c15a18"
+  },
+  {
+    "name": "ram-watch/popup.js",
+    "sha256": "33f85e48709f3ca60a544bafb0625f1d8437a4c259dcbd280efb2c23559b5f12"
+  },
+  {
+    "name": "ram-watch/setup.css",
+    "sha256": "768813486aef8f45bfe37aeed34f0fe8589af7bfa9cc785f6328a63b0001bd21"
+  },
+  {
+    "name": "ram-watch/setup.html",
+    "sha256": "f9d4dc3e6115a3561b21be3bf602a99cf31b446c8c315cc98d608e2f342a7c4b"
+  },
+  {
+    "name": "ram-watch/setup.js",
+    "sha256": "832e1914c2c86738db1c689ebe941f539f8a96ab45c060a9854b4c7f95150db2"
+  },
+  {
+    "name": "companion/Install.cmd",
+    "sha256": "992d1aa8d718bd277118240d34664d7d1fd8a0623d88576dddb6a1e421b7212b"
+  },
+  {
+    "name": "companion/Start-RAM-Watch.cmd",
+    "sha256": "362f80509820f12f8a3a00115d466be191b4f4acbb558723bb655bca61f562e1"
+  },
+  {
+    "name": "companion/Uninstall.cmd",
+    "sha256": "300c477a818c702091fa19053ac9273abe790f02125d7102136668a3e9abd1df"
+  },
+  {
+    "name": "companion/bin/RamWatch.Native.exe",
+    "sha256": "20dcbfb892520b1d348bcabb3ce3e462c018153c2d69212b321c4212b94f4474"
+  },
+  {
+    "name": "README.md",
+    "sha256": "fb8d0c2dcc7bfdf57b827e498c494f4a202add9a76f36c9ef657366a98788029"
+  },
+  {
+    "name": "tests/verification.json",
+    "sha256": "398007f02c588ff927a47caa18edc33b951bb0301a312ef4c9907576655a886c"
+  }
+]

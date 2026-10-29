@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RAM Watch companion setup</title>
+  <link rel="stylesheet" href="setup.css">
+</head>
+<body>
+  <main>
+    <h1>Renderer footprints</h1>
+    <p>The Windows companion reads the renderer's private memory counter, the same type of counter used by Chrome Task Manager. It runs for a short sample at most once a minute, then exits.</p>
+    <div class="notice"><strong>Use the monitored Chrome profile.</strong> Current Chrome versions require a separate profile for this connection. Your usual Chrome profile is not monitored by the companion. This uses your existing Chrome installation.</div>
+    <ol>
+      <li>Extract the complete RAM Watch package to a permanent folder.</li>
+      <li>Run <code>companion\Start-RAM-Watch.cmd</code>. In that Chrome window, open <code>chrome://extensions</code>, enable Developer mode, choose <strong>Load unpacked</strong>, and select the package's <code>ram-watch</code> folder.</li>
+      <li>Open <strong>Companion setup</strong> from RAM Watch's menu in that window. Copy its extension ID below.</li>
+      <li>Run <code>companion\Install.cmd</code> and paste the ID. Installation is for your Windows user only.</li>
+      <li>Click <strong>Enable renderer footprints</strong> below and allow the companion permission. Chrome grants debugger access when you load or re-enable the extension; that permission identifies tabs, and the extension does not attach a debugger to each tab.</li>
+    </ol>
+    <label for="extensionId">This extension's ID</label>
+    <div class="id-line"><input id="extensionId" readonly><button id="copy">Copy</button></div>
+    <button id="enable">Enable renderer footprints</button>
+    <p id="status" role="status" aria-live="polite"></p>
+    <h2>Keep the overhead small</h2>
+    <p>The helper is a native Windows executable, with no resident service, scheduled startup task, or extra language runtime. It keeps no trace files or measurement history. Samples are cached for a minute, including while the popup is open.</p>
+    <p>The launcher requests a 64 MiB browser disk cache and a 16 MiB media cache. These are cache targets, not a limit on all profile data: site storage, sign-ins, downloads, and other Chrome files can grow. Using this as your browsing profile avoids keeping duplicate Chrome sessions open.</p>
+    <h2>What the number covers</h2>
+    <p>A row shows its main renderer's private footprint. Related tabs can share a renderer; they are labeled as shared and that process is counted only once in the total. Browser, GPU, and separate iframe/worker processes are not added to each tab. Windows private footprint includes committed memory, so it is not a measurement of physically resident RAM alone.</p>
+    <p>Short tracing sessions identify the renderer PID; no screenshots, CPU profiles, memory dumps, or page scripts are collected by the helper. Another active Chrome profiler can prevent a sample; that tab will show as unavailable. Memory values change continuously, so comparisons with Task Manager should be taken at the same time.</p>
+    <h2>Connection and removal</h2>
+    <p>The browser connection listens on loopback with a randomly assigned port. Other software running as your Windows user may be able to control this monitored profile through that connection. Use the supplied launcher only for the profile you want to monitor.</p>
+    <p>Run <code>companion\Uninstall.cmd</code> to unregister and remove the helper. Your Chrome profile data is kept. Switching back to <strong>page estimates</strong> in the menu stops using the companion.</p>
+  </main>
+  <script src="setup.js"></script>
+</body>
+</html>

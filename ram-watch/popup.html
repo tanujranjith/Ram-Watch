@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>RAM Watch</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+
+  <header class="top">
+    <div>
+      <h1>RAM Watch</h1>
+      <div class="sub"><i class="dot" id="liveDot"></i><span id="updated">Checking…</span></div>
+    </div>
+    <div class="menu-wrap">
+      <button class="circ" id="menuBtn" title="More">•••</button>
+      <div class="menu card" id="menu" hidden>
+        <button data-act="refresh">Check now</button>
+        <button data-act="sort">Sort by name</button>
+        <button data-act="mode" id="modeBtn">Use renderer footprints</button>
+        <button data-act="setup">Companion setup</button>
+        <div class="menu-sep"></div>
+        <div class="menu-note" id="modeNote"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="card hero">
+    <div class="big"><span id="totalNum">–</span><span class="unit" id="totalUnit"></span></div>
+    <div class="cap" id="totalCap">Estimated page memory · not total browser RAM</div>
+    <div class="mode-status" id="modeStatus"></div>
+    <div class="bar" id="totalBar"></div>
+    <div class="heaviest" id="heaviest"></div>
+  </section>
+
+  <div class="hdr">Alerts</div>
+  <section class="card pad">
+    <label class="lr sw">
+      <span>Memory alerts</span>
+      <input type="checkbox" id="enabled" class="switch" />
+    </label>
+    <div class="hair"></div>
+    <div class="lr"><span id="thresholdLabel">Alert above estimate</span><b id="limitValue">500 MB</b></div>
+    <input type="range" id="limit" min="100" max="4096" step="1" value="500" />
+    <div class="seg" id="chips">
+      <button data-mb="250">250 MB</button>
+      <button data-mb="500">500 MB</button>
+      <button data-mb="1024">1 GB</button>
+      <button data-mb="2048">2 GB</button>
+    </div>
+  </section>
+
+  <main class="scroll" id="scroll"></main>
+
+  <script src="memory.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

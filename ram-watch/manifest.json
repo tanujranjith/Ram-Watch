@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "RAM Watch",
+  "version": "3.0.0",
+  "minimum_chrome_version": "120",
+  "description": "Monitor renderer memory with the Windows companion, or view clearly labeled page estimates. Hibernate or close heavy tabs.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "notifications",
+    "storage",
+    "alarms",
+    "favicon",
+    "debugger"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "RAM Watch",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "optional_permissions": [
+    "nativeMessaging"
+  ]
+}
